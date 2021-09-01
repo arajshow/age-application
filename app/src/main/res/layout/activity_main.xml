@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="25dp"
     android:background="@color/purple_100"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:shadowColor="#FFFFFF"
         android:text="CALCULATE YOUR"
         android:textColor="@color/purple_500"
@@ -32,15 +32,6 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:shadowColor="#FFFFFF"
-        android:text="IN  MINUTES"
-        android:textColor="@color/purple_500"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/buttonDatePiker"
@@ -98,6 +89,22 @@
 
     <TextView
         android:id="@+id/tvageInHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:textColor="#949494"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/DateInDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_400"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"/>
+
+    <TextView
+        android:id="@+id/tvageInDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"

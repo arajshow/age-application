@@ -36,21 +36,24 @@ class MainActivity : AppCompatActivity() {
         val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener {
                     view, SelectedYear, SelectedMonth, SelectedDay ->
 
-                Toast.makeText(this, "thanks for using this\uD83C\uDF1A",Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Enjoy Your Day",Toast.LENGTH_LONG).show()
 
                 val selectedDate = " $SelectedDay/${SelectedMonth+1}/$SelectedYear"
 
                 tvdate.setText(selectedDate)
             tvselectedDate.text = "Selected Date"
                 tvageInMinutes.text = "Age In Minutes"
-            tvageInHour.text = "Age In Hours"
+            tvageInHour.text = "Age In Hour"
+            tvageInDay.text = "Age In Days"
 
                 val sdf = SimpleDateFormat("dd/MM/yyyy" , Locale.ENGLISH)
 
                 val theDate = sdf.parse(selectedDate)
 
-                val selectedDateInMinutes = theDate!!.time/60000
                 val selectedDateInHours = theDate!!.time/3600000
+                val selectedDateInMinutes = theDate.time/60000
+            val selectedDateInD = theDate.time/86400000
+
                 /*this above will give time in minutes,hour from 1jan 1970 to my selected date
 
               i am doing below code in one line which i made in 3 line above as in 36 ,40 ,42 */
@@ -58,14 +61,18 @@ class MainActivity : AppCompatActivity() {
                 val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
                 //this will give time in millisecond from 1jan 1970
 
-                val currentDateInMinutes = currentDate!!.time /60000
-                val currentDateInHours = theDate!!.time/36000
+                val currentDateInHours = currentDate.time/3600000
+                val currentDateInMinutes = currentDate.time /60000
+            val currentDateInD = currentDate.time /86400000
 
-                val differenceTimeInMinutes = currentDateInMinutes - selectedDateInMinutes
                 val differenceTimeInHours = currentDateInHours - selectedDateInHours
+                val differenceTimeInMinutes = currentDateInMinutes - selectedDateInMinutes
+            val differenceTimeInD = currentDateInD - selectedDateInD
 
-                DateInMinute.setText(differenceTimeInMinutes.toString())
                 DateInHour.setText(differenceTimeInHours.toString())
+                DateInMinute.setText(differenceTimeInMinutes.toString())
+            DateInDay.setText(differenceTimeInD.toString())
+
 
                 },year , month, day)
 
