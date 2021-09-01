@@ -12,7 +12,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-
+//hi there, i am making my first project
+//see you soon
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
