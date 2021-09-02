@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
                 val selectedDate = " $SelectedDay/${SelectedMonth+1}/$SelectedYear"
 
                 tvdate.setText(selectedDate)
-            tvselectedDate.text = "Selected Date"
-                tvageInMinutes.text = "Age In Minutes"
-            tvageInHour.text = "Age In Hour"
-            tvageInDay.text = "Age In Days"
+            tvselectedDate.text = " Selected Date "
+                tvageInMinutes.text = " Age In Minutes "
+            tvageInHour.text = " Age In Hour "
+            tvageInDay.text = " Age In Days "
 
                 val sdf = SimpleDateFormat("dd/MM/yyyy" , Locale.ENGLISH)
 
